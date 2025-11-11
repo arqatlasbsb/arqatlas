@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nome": "Palácio do Planalto",
+    "autor": "Oscar Niemeyer",
+    "decada": "1960",
+    "tipo": "Institucional",
+    "descricao": "O Palácio do Planalto é a sede do Poder Executivo Federal do Brasil, localizado na Praça dos Três Poderes, em Brasília. Projetado por Oscar Niemeyer, foi inaugurado em 21 de abril de 1960.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Pal%C3%A1cio_do_Planalto.jpg",
+    "coordenadas": [-15.7990489, -47.8607689]
+  },
+  {
+    "id": 2,
+    "nome": "Congresso Nacional",
+    "autor": "Oscar Niemeyer",
+    "decada": "1960",
+    "tipo": "Institucional",
+    "descricao": "O Congresso Nacional é composto pela Câmara dos Deputados e pelo Senado Federal. Sua arquitetura icônica é uma das mais conhecidas criações de Niemeyer.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Congresso_Nacional_do_Brasil_2019.jpg",
+    "coordenadas": [-15.7996905, -47.882617]
+  },
+  {
+    "id": 3,
+    "nome": "Catedral de Brasília",
+    "autor": "Oscar Niemeyer",
+    "decada": "1970",
+    "tipo": "Religiosa",
+    "descricao": "A Catedral Metropolitana de Brasília, inaugurada em 1970, é uma das obras mais emblemáticas do modernismo brasileiro. Seu formato remete a mãos erguidas para o céu.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/8/88/Catedral_de_Bras%C3%ADlia_2017.jpg",
+    "coordenadas": [-15.7982913, -47.8781216]
+  }
+]
