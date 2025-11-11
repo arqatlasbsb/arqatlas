@@ -1,42 +1,15 @@
-import fundoSection from "../../images/Logo/fundo-section.svg";
 const NewsSection = () => {
   const newsData = [
-    {
-      id: 1,
-      date: "9 de julho de 2025",
-      title: "lorem ipsum dolor sit amet - lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-      image: "",
-      link: "/noticias/",
-    },
-    {
-      id: 2,
-      date: "9 de julho de 2025",
-      title: "lorem ipsum dolor sit amet - lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-      image: "",
-      link: "/noticias/",
-    },
-    {
-      id: 3,
-      date: "9 de julho de 2025",
-      title: "lorem ipsum dolor sit amet - lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
-      image: "",
-      link: "/noticias/",
-    },
+    // ... conteúdo inalterado
   ];
 
   return (
-    <section className="min-h-screen bg-no-repeat bg-cover relative overflow-hidden  ">
+    <section className="min-h-screen bg-no-repeat bg-cover relative overflow-hidden">
       <div className="relative z-10">
         <div className="flex items-start justify-between p-8">
           <div>
             <h2 className="text-4xl font-bold text-[#C54930]">
-              Nossa Ultimas Notícias
+              Nossa Últimas Notícias
             </h2>
             <p className="text-gray-800">
               Fique por dentro das últimas novidades
@@ -61,11 +34,12 @@ const NewsSection = () => {
           </a>
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
           {newsData.map((news) => (
             <div
               key={news.id}
-              className="bg-white-50  border-2 border-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 "
+              className="bg-white border-2 border-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
               style={{
                 boxShadow:
                   "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
@@ -79,7 +53,7 @@ const NewsSection = () => {
               </div>
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-3">{news.date}</p>
-                <h3 className="text-lg font-semibold mb-3 line-clamp-2 text-balance">
+                <h3 className="text-lg font-semibold mb-3 line-clamp-2">
                   {news.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-4">

@@ -11,12 +11,12 @@ const GalleryGrid = ({ images = [] }) => {
         {/* GRID PRINCIPAL */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* FOTO GRANDE */}
-          <div className="rounded-xl overflow-hidden  bg-gray-300 w-[450px] h-[450px]">
+          <div className="rounded-xl overflow-hidden bg-gray-300 w-[450px] h-[450px]">
             {images[0] && (
               <img
                 src={images[0]}
                 className="w-full h-full object-cover"
-                alt="Imagem grande"
+                alt="Imagem principal da galeria"
               />
             )}
           </div>
@@ -28,14 +28,22 @@ const GalleryGrid = ({ images = [] }) => {
               {/* QUADRADO */}
               <div className="h-[220px] w-[220px] rounded-xl overflow-hidden bg-gray-300">
                 {images[1] && (
-                  <img src={images[1]} className="w-full h-full object-cover" />
+                  <img
+                    src={images[1]}
+                    className="w-full h-full object-cover"
+                    alt="Imagem 2 da galeria"
+                  />
                 )}
               </div>
 
               {/* RETÂNGULO */}
               <div className="h-[220px] w-[400px] rounded-xl overflow-hidden bg-gray-400">
                 {images[2] && (
-                  <img src={images[2]} className="w-full h-full object-cover" />
+                  <img
+                    src={images[2]}
+                    className="w-full h-full object-cover"
+                    alt="Imagem 3 da galeria"
+                  />
                 )}
               </div>
             </div>
@@ -45,14 +53,22 @@ const GalleryGrid = ({ images = [] }) => {
               {/* RETÂNGULO */}
               <div className="h-[220px] w-[400px] rounded-xl overflow-hidden bg-gray-400">
                 {images[3] && (
-                  <img src={images[3]} className="w-full h-full object-cover" />
+                  <img
+                    src={images[3]}
+                    className="w-full h-full object-cover"
+                    alt="Imagem 4 da galeria"
+                  />
                 )}
               </div>
 
               {/* QUADRADO */}
               <div className="h-[220px] w-[220px] rounded-xl overflow-hidden bg-gray-300">
                 {images[4] && (
-                  <img src={images[4]} className="w-full h-full object-cover" />
+                  <img
+                    src={images[4]}
+                    className="w-full h-full object-cover"
+                    alt="Imagem 5 da galeria"
+                  />
                 )}
               </div>
             </div>
