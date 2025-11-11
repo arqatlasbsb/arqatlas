@@ -8,6 +8,8 @@ import { HomeBanners } from "../Data/BannerData.js";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white  flex flex-col">
+      <div className="bg-red-500 text-white p-4">Teste Tailwind</div>
+
       <NavBar />
       <Banner images={HomeBanners} />
       <SectionSociais />
