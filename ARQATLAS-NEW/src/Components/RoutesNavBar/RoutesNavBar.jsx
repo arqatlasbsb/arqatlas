@@ -15,7 +15,9 @@ const RoutesNavBar = () => {
         Mapa
       </Link>
 
-      <a href="/galeria" className={baseClasses}></a>
+      <a href="/galeria" className={baseClasses}>
+        Galeria
+      </a>
 
       <a href="#equipe" className={baseClasses}>
         Equipe
