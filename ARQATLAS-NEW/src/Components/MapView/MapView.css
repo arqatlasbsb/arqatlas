@@ -1,0 +1,23 @@
+.map-wrapper {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mapa completo (Página /mapa) */
+.full-map {
+  height: 75vh;
+}
+
+/* Mapa pequeno (Home) */
+.home-map {
+  height: 400px;
+  pointer-events: none; /* Desabilita interação */
+  filter: brightness(0.95);
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+}
