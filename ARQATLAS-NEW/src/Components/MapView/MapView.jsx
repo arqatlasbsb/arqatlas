@@ -1,54 +1,87 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import obras from "../../Data/obras.json";
 import "./MapView.css";
 
-// Ícone personalizado
+// ===============================
+// 🔹 Ícone padrão azul (MAIOR)
+// ===============================
 const markerIcon = new L.Icon({
-  iconUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-  iconSize: [28, 42],
-  iconAnchor: [14, 42],
-  popupAnchor: [0, -35],
+  iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [0, -55],
 });
 
+
+// ===============================
+// 🔹 Componente principal do mapa
+// ===============================
 const MapView = ({ modo = "completo" }) => {
   const navigate = useNavigate();
-
-  // Define tamanho e comportamento conforme o modo
   const isHome = modo === "home";
 
   return (
     <div className={`map-wrapper ${isHome ? "home-map" : "full-map"}`}>
       <MapContainer
-        center={[-15.793889, -47.882778]}
-        zoom={isHome ? 12 : 13}
+        center={[-15.7990489, -47.873]}
+        zoom={isHome ? 13 : 14}
         scrollWheelZoom={!isHome}
         dragging={!isHome}
         className="leaflet-map"
       >
+        {/* OpenStreetMap */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+          attribution='&copy; OpenStreetMap contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {obras.map((obra, index) => (
+        {/* MARCADORES */}
+        {obras.map((obra) => (
           <Marker
-            key={index}
-            position={[obra.coordenadas[0], obra.coordenadas[1]]}
+            key={obra.id}
+            position={obra.coordenadas}
             icon={markerIcon}
             eventHandlers={{
               click: () => navigate(`/obra/${obra.id}`),
             }}
           >
-            <Popup>
-              <strong>{obra.nome}</strong>
-              <br />
-              {obra.autor || "Autor desconhecido"} — {obra.decada}
-            </Popup>
+            {/* Tooltip estilizado (igual mapa principal) */}
+            <Tooltip
+              direction="top"
+              offset={[0, -50]}
+              opacity={1}
+              className="!bg-transparent !border-none !shadow-none"
+            >
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 min-w-[160px] max-w-[200px] transition-all duration-200 hover:scale-[1.03]">
+                <p className="font-bold text-[#0A192F] text-sm mb-1 leading-tight">
+                  {obra.nome}
+                </p>
+                <p className="text-gray-600 text-xs italic mb-2">
+                  {obra.autor} • {obra.decada}
+                </p>
+
+                <div className="relative w-full h-[60px] mb-2 overflow-hidden rounded-md">
+                  <img
+                    src={obra.imagem}
+                    alt={obra.nome}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+
+                {!isHome && (
+                  <button
+                    onClick={() => navigate(`/obra/${obra.id}`)}
+                    className="text-xs bg-[#0A192F] text-white px-2 py-1 rounded-md hover:bg-[#132c57] transition w-full"
+                  >
+                    Ver detalhes
+                  </button>
+                )}
+              </div>
+            </Tooltip>
           </Marker>
         ))}
       </MapContainer>

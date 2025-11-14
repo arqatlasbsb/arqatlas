@@ -11,7 +11,7 @@ const MapHome = ({ images = [] }) => {
       }}>
       <div className="flex items-center justify-between gap-8">
         <div className="w-1/2">
-          <Mapa />
+          <Mapa modo="home"/>
         </div>
 
         <div className="w-1/2 flex flex-col gap-4">

@@ -7,44 +7,20 @@ import { useNavigate } from "react-router-dom";
 import obrasData from "../Data/obras.json";
 
 // ==========================================================
-// 🔹 ÍCONES PERSONALIZADOS POR TIPO (usando assets locais)
+// 🔹 ÍCONE PADRÃO DO LEAFLET (MAIOR)
 // ==========================================================
-const getIconByTipo = (tipo) => {
-  // Definição de cor conforme tipo
-  const color =
-    tipo === "Religiosa"
-      ? "#3B82F6" // azul
-      : tipo === "Institucional"
-      ? "#EC4899" // rosa CEUB
-      : "#10B981"; // verde padrão
+const getIconByTipo = () => {
+  return new L.Icon({
+    iconUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+    shadowUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 
-  // Criação do marcador estilizado via SVG inline
-  return L.divIcon({
-    html: `
-      <div style="
-        position: relative;
-        width: 32px;
-        height: 45px;
-      ">
-        <img
-          src="${require('../assets/icons/marker-icon.png')}"
-          style="width: 32px; height: 45px; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));"
-        />
-        <div style="
-          position: absolute;
-          top: 7px;
-          left: 8px;
-          width: 16px;
-          height: 16px;
-          background-color: ${color};
-          border-radius: 50%;
-          border: 2px solid white;
-        "></div>
-      </div>
-    `,
-    className: "",
-    iconSize: [32, 45],
-    iconAnchor: [16, 45],
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],   
+    popupAnchor: [1, -55],
+    shadowSize: [50, 64],
+    shadowAnchor: [15, 64],
   });
 };
 
@@ -54,17 +30,15 @@ const getIconByTipo = (tipo) => {
 export default function Mapa() {
   const navigate = useNavigate();
 
-  // Estado dos filtros
   const [showFilters, setShowFilters] = useState(false);
   const [tipo, setTipo] = useState("Todos");
   const [decada, setDecada] = useState("Todas");
   const [arquiteto, setArquiteto] = useState("");
 
-  // Estado da obra selecionada
   const [obraSelecionada, setObraSelecionada] = useState(null);
 
   // ==========================================================
-  // 🔹 FILTRAGEM DAS OBRAS
+  // 🔹 FILTGEM DAS OBRAS
   // ==========================================================
   const obrasFiltradas = obrasData.filter((obra) => {
     const filtroTipo =
@@ -128,7 +102,6 @@ export default function Mapa() {
           <div className="absolute top-20 right-6 z-[1000] bg-white rounded-2xl shadow-lg p-6 w-72 border border-gray-100">
             <h2 className="text-2xl font-bold text-[#0A192F] mb-6">🔍 Filtros</h2>
 
-            {/* Tipo */}
             <label className="block text-sm font-semibold text-gray-700 mb-1">
               Tipo de Obra
             </label>
@@ -142,7 +115,6 @@ export default function Mapa() {
               <option>Institucional</option>
             </select>
 
-            {/* Década */}
             <label className="block text-sm font-semibold text-gray-700 mb-1">
               Década
             </label>
@@ -157,7 +129,6 @@ export default function Mapa() {
               <option>1970</option>
             </select>
 
-            {/* Arquiteto */}
             <label className="block text-sm font-semibold text-gray-700 mb-1">
               Arquiteto
             </label>
@@ -173,7 +144,7 @@ export default function Mapa() {
 
         {/* Mapa */}
         <MapContainer
-          center={[-15.801, -47.88]} // Brasília
+          center={[-15.801, -47.88]}
           zoom={13}
           scrollWheelZoom={true}
           className="h-full w-full z-[1]"
@@ -188,7 +159,7 @@ export default function Mapa() {
             <Marker
               key={obra.id}
               position={obra.coordenadas}
-              icon={getIconByTipo(obra.tipo)}
+              icon={getIconByTipo()}   // <-- AQUI USAMOS O ICONE PADRÃO AZUL
               eventHandlers={{
                 click: () => setObraSelecionada(obra),
               }}
@@ -225,7 +196,7 @@ export default function Mapa() {
           ))}
         </MapContainer>
 
-        {/* Sidebar de detalhes */}
+        {/* Sidebar */}
         {obraSelecionada && (
           <SidebarObra
             obra={obraSelecionada}
