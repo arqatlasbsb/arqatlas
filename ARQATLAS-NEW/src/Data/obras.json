@@ -28,5 +28,187 @@
     "descricao": "A Catedral Metropolitana de Brasília, inaugurada em 1970, é uma das obras mais emblemáticas do modernismo brasileiro. Seu formato remete a mãos erguidas para o céu.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/8/88/Catedral_de_Bras%C3%ADlia_2017.jpg",
     "coordenadas": [-15.7982913, -47.8781216]
-  }
+  },
+
+  {
+    "id": 4,
+    "nome": "Bloco D – SQS 106",
+    "autor": "Oscar Niemeyer",
+    "decada": "1950",
+    "tipo": "Residencial",
+    "descricao": "Edifício habitacional localizado na superquadra sul 106. Segue o partido modernista de habitação coletiva de Brasília, com fachada marcada por elementos de proteção solar e uso de pilotis no térreo. Contribui para o conjunto urbanístico da quadra, em coerência com o Plano Piloto.",
+    "imagem": "",
+    "coordenadas": [-15.81259255228585, -47.89843735030472]
+  },
+
+  {
+    "id": 5,
+    "nome": "Colina Velha",
+    "autor": "João Filgueiras Lima (Lelé)",
+    "decada": "1960",
+    "tipo": "Residencial",
+    "descricao": "Conjunto habitacional pioneiro da Universidade de Brasília, destinado a professores, servidores e estudantes. O projeto segue a lógica modernista de blocos residenciais em meio a áreas verdes, promovendo convivência comunitária. É um marco histórico da ocupação universitária no campus Darcy Ribeiro.",
+    "imagem": "",
+    "coordenadas": [-15.76571933761792, -47.87236703330443]
+  },
+  {
+    "id": 6,
+    "nome": "Centro de Ensino Médio Elefante Branco - CEMEB",
+    "autor": "José de Souza Reis",
+    "decada": "1960",
+    "tipo": "Escolar/Educacional",
+    "descricao": "Escola pública de ensino médio tradicional de Brasília, localizada na Asa Sul. O edifício segue a lógica modernista de blocos funcionais implantados em pavilhões horizontais, com grande uso de pilotis e áreas abertas, privilegiando ventilação cruzada e integração com o espaço externo. É referência histórica e cultural na cidade, tendo formado várias gerações de estudantes.",
+    "imagem": "",
+    "coordenadas": [-15.808080877720275, -47.90917534347072]
+  },
+  {
+    "id": 7,
+    "nome": "Galeria do Hotel Nacional",
+    "autor": "Oscar Niemeyer",
+    "decada": "1960",
+    "tipo": "Comercial",
+    "descricao": "Parte integrante do Hotel Nacional, projetado por Oscar Niemeyer. A galeria abriga lojas e serviços, funcionando como extensão da vida urbana no setor hoteleiro. O espaço destaca-se pela fluidez, pela relação com pilotis e pela integração ao programa maior do hotel, reforçando a concepção modernista de Brasília como cidade funcional e coletiva.",
+    "imagem": "",
+    "coordenadas": [-15.792946767094417, -47.891449539118966]
+  },
+  {
+    "id": 8,
+    "nome": "SQS 209 – Bloco I",
+    "autor": "Lúcio Costa",
+    "decada": "1960",
+    "tipo": "Residencial",
+    "descricao": "Bloco habitacional construído em 1999, dentro da tipologia modernista das superquadras da Asa Sul. Segue o modelo de edifícios lineares sobre pilotis, com varandas e aberturas para ventilação natural. Representa a continuidade da linguagem modernista na habitação coletiva de Brasília, ainda que em versão mais tardia.",
+    "imagem": "",
+    "coordenadas": [-15.821153895429635, -47.90406885842001]
+  },
+  {
+    "id": 9,
+    "nome": "Bloco A - SQS 212",
+    "autor": "Manoel Hermano",
+    "decada": "1971",
+    "tipo": "Residencial",
+    "descricao": "Edifício residencial em superquadra da Asa Sul, seguindo o partido modernista de blocos lineares sobre pilotis. A tipologia se caracteriza por racionalidade construtiva, uso coletivo do térreo livre e integração às áreas verdes da quadra. Representa a permanência do modelo original concebido por Lúcio Costa.",
+    "imagem": "",
+    "coordenadas": [-15.826970621910137, -47.911370294255676]
+  },
+  {
+    "id": 10,
+    "nome": "Edifício Genève",
+    "autor": "Cláudio Meireles Fontes",
+    "decada": "1975",
+    "tipo": "Residencial",
+    "descricao": "Edifício residencial localizado em área central de Brasília. Adota a tipologia modernista de bloco vertical com pilotis e fachada marcada por elementos de brise-soleil. É exemplar da arquitetura residencial coletiva de médio padrão, contribuindo para o tecido urbano cotidiano da capital.",
+    "imagem": "",
+    "coordenadas": [-15.807831521383752, -47.88880689877859]
+  },
+  {
+    "id": 11,
+    "nome": "SQN 206",
+    "autor": "Marcílio Mendes Ferreira e Takudoo Takada",
+    "decada": "1970",
+    "tipo": "Urbana",
+    "descricao": "Conjunto habitacional em superquadra, projetado segundo os princípios do Plano Piloto. Os edifícios residenciais seguem o partido modernista de blocos lineares suspensos em pilotis, com integração às áreas verdes coletivas e equipamentos urbanos da quadra. Representa a consolidação da tipologia de habitação coletiva característica de Brasília.",
+    "imagem": "",
+    "coordenadas": [-15.768494230499261, -47.88032103762404]
+  },
+  {
+    "id": 12,
+    "nome": "Babilônia",
+    "autor": "Doramélia da Motta",
+    "decada": "1970",
+    "tipo": "Mista",
+    "descricao": "Edifício residencial multifamiliar localizado em área comercial da Asa Norte, projetado por Doramélia da Motta em 1979. O partido explora a inserção da habitação em contexto de quadra de comércio local, criando diálogo entre usos mistos e tipologia residencial. É exemplo de adaptação das diretrizes modernistas às dinâmicas urbanas de adensamento.",
+    "imagem": "",
+    "coordenadas": [-15.770124360251883, -47.87927203513784]
+  },
+  {
+    "id": 13,
+    "nome": "Hospital Sarah Kubitschek – Unidade Brasília (Asa Sul)",
+    "autor": "João Filgueiras Lima (Lelé)",
+    "decada": "1980",
+    "tipo": "Hospitalar",
+    "descricao": "Unidade hospitalar projetada para reabilitação física e neurológica, referência no Brasil. O partido privilegia a humanização do espaço hospitalar, com grandes áreas verdes, pátios internos, galerias de circulação iluminadas naturalmente e integração com jardins. O edifício se destaca pelo caráter inovador na tipologia hospitalar, conciliando alta tecnologia médica e qualidade espacial.",
+    "imagem": "",
+    "coordenadas": [-15.799161725386384, -47.89105516787358]
+  },
+  {
+    "id": 14,
+    "nome": "Nova Colina da UnB ",
+    "autor": "Paulo Marcos Paiva de Oliveira",
+    "decada": "1980",
+    "tipo": "Residencial",
+    "descricao": "Conjunto habitacional voltado para professores e servidores da Universidade de Brasília. Edifícios verticais de uso residencial, implantados em formato de colina, mantendo áreas verdes e convivência. Marca uma nova fase de expansão habitacional dentro do campus, em contraposição à Colina Velha, com maior densidade e adaptação a novas demandas urbanas.",
+    "imagem": "",
+    "coordenadas": [-15.76600440985229, -47.872014207713256]
+  },
+  {
+    "id": 15,
+    "nome": "Habitação São Miguel",
+    "autor": "Mayumi Watanabe de Souza Lima",
+    "decada": "1960",
+    "tipo": "Residencial",
+    "descricao": "Conjunto habitacional implantado na superquadra norte, projetado na década de 1960 por Mayumi Watanabe. Exemplo de habitação coletiva de escala intermediária, com blocos que articulam espaços residenciais e coletivos. Destaca-se pela busca de racionalidade construtiva e pela adaptação ao urbanismo de Brasília, reforçando o caráter social do projeto.",
+    "imagem": "",
+    "coordenadas": [-15.765919948500024, -47.88582691948112]
+  },
+  {
+    "id": 16,
+    "nome": "Biblioteca Escolar Comunitária Professora Tatiana Eliza Nogueira",
+    "autor": "Lúcio Costa / Roberto Burle Marx (paisagista)",
+    "decada": "1970",
+    "tipo": "Escolar/Educacional",
+    "descricao": "A Biblioteca da 308 Sul integra a concepção urbanística de Lúcio Costa para a Unidade de Vizinhança, oferecendo infraestrutura educacional, cultural e comunitária dentro da superquadra. Sua arquitetura é marcada pela simplicidade, funcionalidade e escala humana, expressando os princípios modernistas de integração entre forma, função e contexto. Criada para atender às escolas locais e à comunidade, simboliza o acesso democrático ao conhecimento e à cultura, reforçando o caráter coletivo e cotidiano de Brasília.",
+    "imagem": "",
+    "coordenadas": [-15.815619872321005, -47.904933951984866]
+  },
+  {
+    "id": 17,
+    "nome": "Reitoria da Universidade de Brasília (UnB)",
+    "autor": "Paulo de Melo Zimbres",
+    "decada": "1970",
+    "tipo": "Escolar/Educacional",
+    "descricao": "A Reitoria da UnB, projetada por Paulo de Melo Zimbres em parceria com Vera Galvão e Josué Macedo, é um dos exemplos mais significativos do brutalismo em Brasília. O edifício se compõe por dois blocos paralelos interligados por uma grande rampa e por áreas de convivência, criando um espaço de integração entre arquitetura e paisagem. Seu uso expressivo do concreto aparente marca a materialidade do projeto, ao mesmo tempo em que a solução espacial privilegia acessibilidade, circulação fluida e abertura visual. Além da função administrativa, o edifício se tornou um marco simbólico da identidade institucional da UnB.",
+    "imagem": "",
+    "coordenadas": [-15.763054570467268, -47.86695203611042]
+  },
+  {
+    "id": 18,
+    "nome": "Bloco Tipo AM-2",
+    "autor": "Marcílio Mendes Ferreira e Takudoo Takada",
+    "decada": "1970",
+    "tipo": "Residencial",
+    "descricao": "O Bloco Tipo AM-2, projetado por Marcílio Mendes Ferreira, representa um marco da arquitetura residencial de Brasília, concebido para altos funcionários da Caixa Econômica Federal transferidos do Rio de Janeiro. Edificação premiada com o selo CAU/DF em 2020 pela preservação de suas características originais, mantém os pilotis abertos e a proposta arquitetônica modernista de integração espacial e convívio comunitário. A análise do edifício revela sua importância como exemplo da aplicação prática do conceito de superquadra e da consolidação da cidade nos anos posteriores à sua fundação.",
+    "imagem": "",
+    "coordenadas": [-15.823795872324187, -47.906339316192856]
+  },
+  {
+    "id": 19,
+    "nome": "Mercado das Flores",
+    "autor": "Oscar Niemeyer",
+    "decada": "1980",
+    "tipo": "Comercial",
+    "descricao": "Edificação de pequeno porte destinada ao comércio de flores, localizada no centro de Brasília. Seu partido privilegia a permeabilidade e a integração visual com o espaço urbano, funcionando como ponto de encontro e de vida cotidiana. A simplicidade da forma e a função comunitária reforçam sua importância como referência cultural e afetiva.",
+    "imagem": "",
+    "coordenadas": [-15.82722203220434, -47.927772843512905]
+  },
+  {
+    "id": 20,
+    "nome": "Escola Classe 209 Sul",
+    "autor": "Não encontrado",
+    "decada": "Informação não encontrada",
+    "tipo": "Escolar/Educacional",
+    "descricao": "Escola de ensino fundamental localizada na Asa Sul, implantada em área especial da superquadra. O partido modernista privilegia pavilhões horizontais integrados por áreas abertas e pátios de recreação, reforçando a ideia de educação comunitária dentro do bairro residencial. É exemplo de equipamento público escolar característico de Brasília.",
+    "imagem": "",
+    "coordenadas": [-15.821748600391675, -47.90304638903563]
+  },
+  {
+    "id": 21,
+    "nome": "Colégio Militar de Brasília",
+    "autor": "Informação não encontrada",
+    "decada": "Informação não encontrada",
+    "tipo": "Escolar/Educacional",
+    "descricao": "Instituição de ensino médio e fundamental mantida pelo Exército Brasileiro. O edifício combina a monumentalidade institucional com a tipologia escolar, em implantação de grandes blocos, amplos pátios e espaços de convivência. Representa um marco educacional e arquitetônico em Brasília, conciliando função pedagógica e simbologia militar.",
+    "imagem": "",
+    "coordenadas": [-15.78116657961245, -47.89313729316009]
+  } 
 ]
