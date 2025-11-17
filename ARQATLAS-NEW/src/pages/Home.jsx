@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../Components/NavBar/NavBar";
+import Footer from "../Components/Footer/Footer.jsx";
 import Banner from "../Components/BannerHome/BannerHome";
 import NewsSection from "../Components/NewsSection/NewsSections";
 import SectionSociais from "../Components/SectionSociais/SectionSociais";
@@ -16,7 +17,7 @@ export default function Home() {
       {/* <GalleryGrid images={imagens} /> */}
       <SectionSociais />
       {/* <NewsSection /> */}
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
