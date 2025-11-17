@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import obras from "../../Data/obras.json";
+import GalleryData from "../../Data/GalleryData"; 
 import "./MapView.css";
 
 // ===============================
-// 🔹 Ícone padrão azul (MAIOR)
+// 🔹 Ícone padrão azul
 // ===============================
 const markerIcon = new L.Icon({
   iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
@@ -16,13 +17,21 @@ const markerIcon = new L.Icon({
   popupAnchor: [0, -55],
 });
 
-
 // ===============================
 // 🔹 Componente principal do mapa
 // ===============================
 const MapView = ({ modo = "completo" }) => {
   const navigate = useNavigate();
   const isHome = modo === "home";
+
+  // Função para pegar a imagem correta (local ou URL)
+  const getImage = (obra) => {
+    if (typeof obra.imagem === "number") {
+      const img = GalleryData.find((g) => g.id === obra.imagem);
+      return img?.src || "";
+    }
+    return obra.imagem; // se for URL externa
+  };
 
   return (
     <div className={`map-wrapper ${isHome ? "home-map" : "full-map"}`}>
@@ -35,7 +44,7 @@ const MapView = ({ modo = "completo" }) => {
       >
         {/* OpenStreetMap */}
         <TileLayer
-          attribution='&copy; OpenStreetMap contributors'
+          attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
@@ -49,7 +58,6 @@ const MapView = ({ modo = "completo" }) => {
               click: () => navigate(`/obra/${obra.id}`),
             }}
           >
-            {/* Tooltip estilizado (igual mapa principal) */}
             <Tooltip
               direction="top"
               offset={[0, -50]}
@@ -57,16 +65,17 @@ const MapView = ({ modo = "completo" }) => {
               className="!bg-transparent !border-none !shadow-none"
             >
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 min-w-[160px] max-w-[200px] transition-all duration-200 hover:scale-[1.03]">
-                <p className="font-bold text-[#0A192F] text-sm mb-1 leading-tight">
+                <p className="font-bold text-[#0A192F] text-sm mb-1">
                   {obra.nome}
                 </p>
+
                 <p className="text-gray-600 text-xs italic mb-2">
                   {obra.autor} • {obra.decada}
                 </p>
 
                 <div className="relative w-full h-[60px] mb-2 overflow-hidden rounded-md">
                   <img
-                    src={obra.imagem}
+                    src={getImage(obra)}
                     alt={obra.nome}
                     className="object-cover w-full h-full"
                   />
