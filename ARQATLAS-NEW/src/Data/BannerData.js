@@ -1,11 +1,12 @@
-import Banner01 from "../images/Banners/Banner01.png";
+import Landing from "../images/Banners/Landing.png";
 
 export const HomeBanners = [
   {
     id: 1,
-    desktop: Banner01,
+    desktop: Landing,
     mobile: "",
-    alt: " ",
+    alt: "",
+    link: "/mapa",
   },
   // {
   //  id: 2,

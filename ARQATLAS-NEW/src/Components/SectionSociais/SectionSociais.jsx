@@ -12,7 +12,7 @@ const NewsSection = () => {
         <div className="flex items-start justify-between pl-8 pr-8 pt-8">
           <div>
             <h2 className="text-4xl font-bold text-[#C54930]">
-              Acompanhe no Instagrem
+              Últimas Notícias
             </h2>
             <p className="text-gray-800">
               Fique por dentro das últimas novidades
